@@ -1,47 +1,41 @@
-/* Importuojame Google Fonts šriftus */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
 
-/* Pagrindiniai stiliai */
 body {
-    font-family: 'Open Sans', sans-serif; /* Pakeistas pagrindinis šriftas */
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.7; /* Padidintas teksto eilučių aukštis geresniam skaitomumui */
-    background-color: #f0f2f5; /* Švelnesnis fonas */
-    color: #34495e; /* Tamsesnis, bet ne juodas tekstas */
+    line-height: 1.7;
+    background-color: #f0f2f5;
+    color: #34495e;
 }
 
-/* Antraštė */
 header {
-    background: linear-gradient(to right, #2c3e50, #3498db); /* Tamsiai mėlyna / šviesiai mėlyna gradientas */
-    color: #ecf0f1; /* Šviesesnis tekstas */
-    padding: 15px 30px; /* Didesnis padding'as */
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: #ecf0f1;
+    padding: 15px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Leidžia elementams persikelti į kitą eilutę, jei nėra vietos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Švelnus šešėlis */
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Stilizuojame naująjį svetainės pavadinimą */
 .site-title {
-    font-family: 'Montserrat', sans-serif; /* Naudojame Montserrat šriftą pavadinimui */
-    font-size: 2.2em; /* Padidintas šrifto dydis */
-    font-weight: 700; /* Storesnis šriftas */
-    color: #ecf0f1; /* Šviesesnė spalva, kad derėtų su antraštės fonu */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Lengvas šešėlis, kad išsiskirtų */
-    margin-right: 30px; /* Tarpas tarp pavadinimo ir navigacijos */
-    white-space: nowrap; /* Apsaugo nuo pavadinimo persikėlimo į kitą eilutę, jei įmanoma */
-}
-
-/* Logo stilius nebereikalingas, bet paliekame, jei ateityje bus norima grąžinti */
-.logo {
-    height: 60px; /* Padidintas logo dydis */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #ecf0f1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin-right: 30px;
-    display: none; /* Paslepiame logotipą */
+    white-space: nowrap;
 }
 
-/* Navigacija */
+.logo {
+    height: 60px;
+    margin-right: 30px;
+    display: none;
+}
+
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -50,53 +44,50 @@ nav {
 
 nav a {
     color: #ecf0f1;
-    margin: 0 15px; /* Didesnis tarpas tarp nuorodų */
+    margin: 0 15px;
     text-decoration: none;
-    font-weight: 600; /* Storesnis šriftas */
+    font-weight: 600;
     padding: 8px 0;
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Švelnios perėjimų animacijos */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-    color: #f1c40f; /* Ryškesnė akcento spalva */
+    color: #f1c40f;
     text-decoration: underline;
-    text-underline-offset: 4px; /* Atitraukia pabraukimą nuo teksto */
+    text-underline-offset: 4px;
 }
 
-/* Pagrindinis turinys */
 main {
-    padding: 30px 20px; /* Didesnis padding'as */
+    padding: 30px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif; /* Antraštės šriftas */
-    color: #2c3e50; /* Tamsiai mėlyna spalva */
-    font-weight: 700; /* Storesnis šriftas */
-    font-size: 2.8em; /* Didesnis h1 */
-    text-align: center; /* Centruojame h1 */
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 2.8em;
+    text-align: center;
     margin-bottom: 40px;
 }
 
-/* Bendras h2 stilius - dabar naudojamas ir grupės pavadinimams */
 h2 {
     font-family: 'Montserrat', sans-serif;
     color: #2c3e50;
     font-weight: 700;
     font-size: 2em;
-    border-bottom: 2px solid #3498db; /* Mėlyna linija po h2 */
+    border-bottom: 2px solid #3498db;
     padding-bottom: 5px;
     margin-bottom: 25px;
 }
 
-/* Naujas h3 stilius - žemėlapių elementų pavadinimams */
 h3 {
     font-family: 'Montserrat', sans-serif;
     color: #2c3e50;
     font-weight: 600;
-    font-size: 1.7em; /* Didesnis pavadinimas */
+    font-size: 1.7em;
     margin: 10px 20px;
     margin-bottom: 15px;
 }
@@ -114,23 +105,21 @@ section:hover {
     transform: translateY(-5px);
 }
 
-/* ATNAUJINTA section.intro dalis (PADIDINTA) */
 section.intro {
-    position: relative; /* Svarbu, kad paveikslėlis pozicionuotųsi pagal šią sekciją */
+    position: relative;
     text-align: center;
-    /* Foną dabar valdys paveikslėlis, bet paliekame kaip atsarginį ar švelnų atspalvį */
-    background: linear-gradient(to right, #3498db, #8e44ad); 
+    background: linear-gradient(to right, #3498db, #8e44ad);
     color: #fff;
-    padding: 70px 30px; /* Padidintas viršutinis/apatins padding'as */
-    min-height: 400px; /* Minimalus aukštis, kad blokas būtų didesnis */
-    display: flex; /* Leidžia centuoti turinį flexbox pagalba */
+    padding: 70px 30px;
+    min-height: 400px;
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Centruoja turinį vertikaliai */
-    align-items: center; /* Centruoja turinį horizontaliai */
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    margin-bottom: 40px; /* Didesnis tarpas po intro sekcija */
-    border-radius: 12px; /* Apvalesni kampai */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ryškesnis šešėlis */
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .intro-background-img {
@@ -139,29 +128,28 @@ section.intro {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Užtikrina, kad paveikslėlis užpildytų visą erdvę */
-    opacity: 0.3; /* Šiek tiek tamsesnis, kad tekstas labiau išsiskirtų */
-    z-index: 1; /* Paveikslėlis bus po tekstu */
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 1;
 }
 
 section.intro h1 {
-    position: relative; /* Užtikrina, kad tekstas būtų virš paveikslėlio */
+    position: relative;
     z-index: 2;
     color: #fff;
-    font-size: 4em; /* Dar didesnis pavadinimas */
-    margin-bottom: 20px; /* Didesnis tarpas */
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.7); /* Ryškesnis šešėlis tekstui */
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
 }
 
 section.intro p {
-    position: relative; /* Užtikrina, kad tekstas būtų virš paveikslėlio */
+    position: relative;
     z-index: 2;
-    font-size: 1.5em; /* Didesnis šriftas */
-    max-width: 900px; /* Platesnis tekstas */
+    font-size: 1.5em;
+    max-width: 900px;
     margin: 0 auto;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Ryškesnis šešėlis tekstui */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
-/* ATNAUJINTA section.intro dalis PABAIGA */
 
 section.content p {
     font-size: 1.1em;
@@ -178,19 +166,18 @@ section img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* Poraštė - ATNAUJINTA (MĖLYNA JUOSTA) */
 footer {
-    background: #004d99; /* Ryškiai mėlyna poraštės spalva */
+    background: #004d99;
     color: #ecf0f1;
     text-align: center;
-    padding: 25px; /* Didesnis padding'as */
+    padding: 25px;
     margin-top: 40px;
-    font-size: 1em; /* Šiek tiek didesnis šriftas */
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Švelnus šešėlis viršuje */
+    font-size: 1em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer a {
-    color: #f1c40f; /* Geltona nuoroda poraštėje */
+    color: #f1c40f;
     text-decoration: none;
     font-weight: 600;
     margin-left: 10px;
@@ -198,11 +185,10 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffd700; /* Šviesesnė geltona užvedus */
+    color: #ffd700;
     text-decoration: underline;
 }
 
-/* Žemėlapių grupės stiliai */
 .map-group {
     background-color: #ffffff;
     padding: 30px;
@@ -220,7 +206,6 @@ footer a:hover {
     padding-bottom: 10px;
 }
 
-/* Žemėlapių galerija */
 .map-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -247,7 +232,6 @@ footer a:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-/* Paveikslėlio nuorodos konteineris */
 .map-thumbnail-link {
     display: block;
     line-height: 0;
@@ -261,7 +245,6 @@ footer a:hover {
     margin-bottom: 20px;
 }
 
-/* P pakeitimai viduje map-item */
 .map-item p {
     font-size: 1em;
     color: #666;
@@ -269,7 +252,6 @@ footer a:hover {
     flex-grow: 1;
 }
 
-/* MYGTUKŲ STILIAI */
 .view-map-button {
     display: inline-block;
     background-color: #3498db;
@@ -290,7 +272,6 @@ footer a:hover {
     text-decoration: none;
 }
 
-/* iframe stiliai (jei naudojami kituose puslapiuose) */
 main iframe {
     max-width: 100%;
     height: 600px;
@@ -300,7 +281,6 @@ main iframe {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Grįžimo nuoroda (jei ji yra) */
 main p a {
     color: #3498db;
     text-decoration: none;
@@ -313,7 +293,6 @@ main p a:hover {
     color: #2980b9;
 }
 
-/* Media Queries - Reaguojantis dizainas */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -321,11 +300,10 @@ main p a:hover {
         padding: 15px 20px;
     }
 
-    /* .site-title mobiliesiems */
     .site-title {
-        font-size: 1.8em; /* Sumažiname šriftą mobiliesiems */
-        margin-bottom: 15px; /* Tarpas tarp pavadinimo ir navigacijos */
-        margin-right: 0; /* Panaikiname dešininį tarpą, kad centruotųsi geriau */
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        margin-right: 0;
     }
 
     .logo {
@@ -374,10 +352,9 @@ main p a:hover {
         margin-bottom: 25px;
     }
 
-    /* ATNAUJINTA section.intro mobiliesiems */
     section.intro {
-        padding: 50px 20px; /* Šiek tiek mažesnis padding mobiliesiems */
-        min-height: 300px; /* Šiek tiek mažesnis min aukštis mobiliesiems */
+        padding: 50px 20px;
+        min-height: 300px;
     }
 
     section.intro h1 {
@@ -387,7 +364,6 @@ main p a:hover {
     section.intro p {
         font-size: 1.1em;
     }
-    /* ATNAUJINTA section.intro mobiliesiems PABAIGA */
 
     .map-group {
         padding: 20px;
@@ -414,12 +390,11 @@ main p a:hover {
     }
 
     footer {
-        padding: 20px; /* Sumažintas padding mobiliesiems */
+        padding: 20px;
         font-size: 0.9em;
     }
 }
 
-/* Papildomas media query labai mažiems ekranams */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.8em;
