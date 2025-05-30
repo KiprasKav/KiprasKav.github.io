@@ -1,0 +1,449 @@
+/* Importuojame Google Fonts šriftus */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Pagrindiniai stiliai */
+body {
+    font-family: 'Open Sans', sans-serif; /* Pakeistas pagrindinis šriftas */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7; /* Padidintas teksto eilučių aukštis geresniam skaitomumui */
+    background-color: #f0f2f5; /* Švelnesnis fonas */
+    color: #34495e; /* Tamsesnis, bet ne juodas tekstas */
+}
+
+/* Antraštė */
+header {
+    background: linear-gradient(to right, #2c3e50, #3498db); /* Tamsiai mėlyna / šviesiai mėlyna gradientas */
+    color: #ecf0f1; /* Šviesesnis tekstas */
+    padding: 15px 30px; /* Didesnis padding'as */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Leidžia elementams persikelti į kitą eilutę, jei nėra vietos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Švelnus šešėlis */
+}
+
+/* Stilizuojame naująjį svetainės pavadinimą */
+.site-title {
+    font-family: 'Montserrat', sans-serif; /* Naudojame Montserrat šriftą pavadinimui */
+    font-size: 2.2em; /* Padidintas šrifto dydis */
+    font-weight: 700; /* Storesnis šriftas */
+    color: #ecf0f1; /* Šviesesnė spalva, kad derėtų su antraštės fonu */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Lengvas šešėlis, kad išsiskirtų */
+    margin-right: 30px; /* Tarpas tarp pavadinimo ir navigacijos */
+    white-space: nowrap; /* Apsaugo nuo pavadinimo persikėlimo į kitą eilutę, jei įmanoma */
+}
+
+/* Logo stilius nebereikalingas, bet paliekame, jei ateityje bus norima grąžinti */
+.logo {
+    height: 60px; /* Padidintas logo dydis */
+    margin-right: 30px;
+    display: none; /* Paslepiame logotipą */
+}
+
+/* Navigacija */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: #ecf0f1;
+    margin: 0 15px; /* Didesnis tarpas tarp nuorodų */
+    text-decoration: none;
+    font-weight: 600; /* Storesnis šriftas */
+    padding: 8px 0;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Švelnios perėjimų animacijos */
+}
+
+nav a:hover,
+nav a.active {
+    color: #f1c40f; /* Ryškesnė akcento spalva */
+    text-decoration: underline;
+    text-underline-offset: 4px; /* Atitraukia pabraukimą nuo teksto */
+}
+
+/* Pagrindinis turinys */
+main {
+    padding: 30px 20px; /* Didesnis padding'as */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Antraštės šriftas */
+    color: #2c3e50; /* Tamsiai mėlyna spalva */
+    font-weight: 700; /* Storesnis šriftas */
+    font-size: 2.8em; /* Didesnis h1 */
+    text-align: center; /* Centruojame h1 */
+    margin-bottom: 40px;
+}
+
+/* Bendras h2 stilius - dabar naudojamas ir grupės pavadinimams */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 2em;
+    border-bottom: 2px solid #3498db; /* Mėlyna linija po h2 */
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+/* Naujas h3 stilius - žemėlapių elementų pavadinimams */
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.7em; /* Didesnis pavadinimas */
+    margin: 10px 20px;
+    margin-bottom: 15px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* ATNAUJINTA section.intro dalis (PADIDINTA) */
+section.intro {
+    position: relative; /* Svarbu, kad paveikslėlis pozicionuotųsi pagal šią sekciją */
+    text-align: center;
+    /* Foną dabar valdys paveikslėlis, bet paliekame kaip atsarginį ar švelnų atspalvį */
+    background: linear-gradient(to right, #3498db, #8e44ad); 
+    color: #fff;
+    padding: 70px 30px; /* Padidintas viršutinis/apatins padding'as */
+    min-height: 400px; /* Minimalus aukštis, kad blokas būtų didesnis */
+    display: flex; /* Leidžia centuoti turinį flexbox pagalba */
+    flex-direction: column;
+    justify-content: center; /* Centruoja turinį vertikaliai */
+    align-items: center; /* Centruoja turinį horizontaliai */
+    overflow: hidden;
+    margin-bottom: 40px; /* Didesnis tarpas po intro sekcija */
+    border-radius: 12px; /* Apvalesni kampai */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ryškesnis šešėlis */
+}
+
+.intro-background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Užtikrina, kad paveikslėlis užpildytų visą erdvę */
+    opacity: 0.3; /* Šiek tiek tamsesnis, kad tekstas labiau išsiskirtų */
+    z-index: 1; /* Paveikslėlis bus po tekstu */
+}
+
+section.intro h1 {
+    position: relative; /* Užtikrina, kad tekstas būtų virš paveikslėlio */
+    z-index: 2;
+    color: #fff;
+    font-size: 4em; /* Dar didesnis pavadinimas */
+    margin-bottom: 20px; /* Didesnis tarpas */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7); /* Ryškesnis šešėlis tekstui */
+}
+
+section.intro p {
+    position: relative; /* Užtikrina, kad tekstas būtų virš paveikslėlio */
+    z-index: 2;
+    font-size: 1.5em; /* Didesnis šriftas */
+    max-width: 900px; /* Platesnis tekstas */
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Ryškesnis šešėlis tekstui */
+}
+/* ATNAUJINTA section.intro dalis PABAIGA */
+
+section.content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Poraštė - ATNAUJINTA (MĖLYNA JUOSTA) */
+footer {
+    background: #004d99; /* Ryškiai mėlyna poraštės spalva */
+    color: #ecf0f1;
+    text-align: center;
+    padding: 25px; /* Didesnis padding'as */
+    margin-top: 40px;
+    font-size: 1em; /* Šiek tiek didesnis šriftas */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Švelnus šešėlis viršuje */
+}
+
+footer a {
+    color: #f1c40f; /* Geltona nuoroda poraštėje */
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffd700; /* Šviesesnė geltona užvedus */
+    text-decoration: underline;
+}
+
+/* Žemėlapių grupės stiliai */
+.map-group {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.map-group .group-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Žemėlapių galerija */
+.map-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0;
+}
+
+.map-item {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Paveikslėlio nuorodos konteineris */
+.map-thumbnail-link {
+    display: block;
+    line-height: 0;
+}
+
+.map-thumbnail {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* P pakeitimai viduje map-item */
+.map-item p {
+    font-size: 1em;
+    color: #666;
+    margin: 0 20px 20px;
+    flex-grow: 1;
+}
+
+/* MYGTUKŲ STILIAI */
+.view-map-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.view-map-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* iframe stiliai (jei naudojami kituose puslapiuose) */
+main iframe {
+    max-width: 100%;
+    height: 600px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Grįžimo nuoroda (jei ji yra) */
+main p a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+main p a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+/* Media Queries - Reaguojantis dizainas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    /* .site-title mobiliesiems */
+    .site-title {
+        font-size: 1.8em; /* Sumažiname šriftą mobiliesiems */
+        margin-bottom: 15px; /* Tarpas tarp pavadinimo ir navigacijos */
+        margin-right: 0; /* Panaikiname dešininį tarpą, kad centruotųsi geriau */
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        height: 50px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav a {
+        margin: 8px 0;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    /* ATNAUJINTA section.intro mobiliesiems */
+    section.intro {
+        padding: 50px 20px; /* Šiek tiek mažesnis padding mobiliesiems */
+        min-height: 300px; /* Šiek tiek mažesnis min aukštis mobiliesiems */
+    }
+
+    section.intro h1 {
+        font-size: 2.8em;
+    }
+
+    section.intro p {
+        font-size: 1.1em;
+    }
+    /* ATNAUJINTA section.intro mobiliesiems PABAIGA */
+
+    .map-group {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .map-group .group-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .map-gallery {
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 25px;
+    }
+
+    .map-item {
+        padding-bottom: 20px;
+    }
+
+    .map-thumbnail {
+        height: 180px;
+    }
+
+    footer {
+        padding: 20px; /* Sumažintas padding mobiliesiems */
+        font-size: 0.9em;
+    }
+}
+
+/* Papildomas media query labai mažiems ekranams */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    section.intro h1 {
+        font-size: 2.2em;
+    }
+    section.intro p {
+        font-size: 1em;
+    }
+    .map-item p {
+        font-size: 0.9em;
+    }
+    .view-map-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    main iframe {
+        height: 350px;
+    }
+}
